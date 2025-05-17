@@ -1,2 +1,18 @@
 # Dynamic_Memory_Allocator_(Heap_Management_System)
-The Dynamic Memory Allocator (Heap Management System) project focuses on designing an efficient system to manage heap memory by minimizing fragmentation and optimizing allocation and deallocation. It involves implementing memory allocation strategies like First-Fit, Best-Fit, Next-Fit, and Buddy System. The project includes representing heap memory using arrays or linked lists and handling memory blocks efficiently. It aims to compare the performance of each strategy in terms of speed, fragmentation, and memory utilization. The system ensures better space usage and enhanced memory management efficiency.
+This project is a simulation of various memory allocation strategies in C, including:
+
+- First-Fit
+- Best-Fit
+- Next-Fit
+- Buddy System Allocation
+- Paging-based Allocation
+- Smart Allocation (Automatic strategy selection)
+- Memory Deallocation
+- Memory Compaction
+- Fragmentation Analysis (Internal & External)
+- Efficiency Tracking
+
+## 🔧 Compilation
+
+```bash
+make
