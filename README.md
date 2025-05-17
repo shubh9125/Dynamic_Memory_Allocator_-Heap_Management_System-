@@ -18,5 +18,7 @@ make
 
 ## 🚀 Usage
 bash
+
 ./allocator
+
 Then follow the prompts to allocate, deallocate, and analyze memory.
