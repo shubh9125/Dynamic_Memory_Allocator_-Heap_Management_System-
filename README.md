@@ -14,6 +14,8 @@ This project is a simulation of various memory allocation strategies in C, inclu
 
 ## 🔧 Compilation
 
+make
+
 ## 🚀 Usage
 bash
 ./allocator
