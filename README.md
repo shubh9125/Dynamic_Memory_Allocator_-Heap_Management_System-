@@ -14,7 +14,7 @@ This project is a simulation of various memory allocation strategies in C, inclu
 
 ## 🔧 Compilation
 
-🚀 Usage
+## 🚀 Usage
 bash
 ./allocator
 Then follow the prompts to allocate, deallocate, and analyze memory.
