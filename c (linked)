@@ -1,0 +1,19 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    printf("Launching the Python GUI Memory Allocator...\n");
+
+    // Command with python interpreter and path in quotes
+    const char *command = "python \"C:/Users/dell/Desktop/DAA PROJECT/xx.py\"";
+
+    int status = system(command);
+
+    if (status == -1) {
+        printf("Failed to launch Python script.\n");
+        return 1;
+    }
+
+    printf("Python script exited with status: %d\n", status);
+    return 0;
+}
