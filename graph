@@ -1,0 +1,43 @@
+import matplotlib.pyplot as plt
+
+class AllocatorMock:
+    def __init__(self):
+        self.counts = {'first': 10, 'best': 10, 'next': 10, 'buddy': 10}
+        self.steps = {'first': 100, 'best': 120, 'next': 80, 'buddy': 110}
+        self.time_taken = {'first': 0.5, 'best': 0.6, 'next': 0.4, 'buddy': 0.55}
+
+class GUI:
+    def __init__(self):
+        self.allocator = AllocatorMock()
+
+    def show_graph(self):
+        strategies = ['first', 'best', 'next', 'buddy']
+        avg_steps = []
+        avg_times = []
+
+        for method in strategies:
+            count = self.allocator.counts[method]
+            if count > 0:
+                avg_steps.append(self.allocator.steps[method] / count)
+                avg_times.append(self.allocator.time_taken[method] / count)
+            else:
+                avg_steps.append(0)
+                avg_times.append(0)
+
+        fig, ax1 = plt.subplots()
+
+        ax1.set_title("Strategy Efficiency Comparison")
+        ax1.set_xlabel("Strategies")
+        ax1.set_ylabel("Average Steps", color='blue')
+        ax1.bar(strategies, avg_steps, color='blue', alpha=0.6, label='Avg Steps')
+
+        ax2 = ax1.twinx()
+        ax2.set_ylabel("Average Time (s)", color='red')
+        ax2.plot(strategies, avg_times, color='red', marker='o', label='Avg Time')
+
+        fig.tight_layout()
+        plt.show()
+
+# Run the graph
+gui = GUI()
+gui.show_graph()
